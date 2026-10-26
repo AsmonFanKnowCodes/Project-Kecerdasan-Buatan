@@ -1,0 +1,6 @@
+Masalah: Kita ingin memperkirakan hasil kesehatan pasien HIV berdasarkan data klinis.
+AI digunakan untuk: Memprediksi salah satu dari dua hasil berikut.
+Viral Suppression: apakah jumlah virus berhasil ditekan.
+5-Year Mortality: apakah pasien meninggal dalam periode lima tahun menurut label dataset.
+Solusi website: Pengguna memasukkan data pasien, lalu website menampilkan prediksi beserta evaluasi model.
+Algoritma: Logistic Regression, Decision Tree, Random Forest.

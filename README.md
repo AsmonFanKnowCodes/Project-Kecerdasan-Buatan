@@ -1,5 +1,7 @@
 # HIV Outcomes Lab
 
+[Buka aplikasi di Streamlit](https://project-kecerdasan-buatan-rrzqzpembyj8dxgnfijjuu.streamlit.app/)
+
 HIV Outcomes Lab adalah proyek kuliah Kecerdasan Buatan yang menggunakan Streamlit untuk mendemonstrasikan klasifikasi mortalitas lima tahun pada profil HIV sintetis. Dashboard mencakup simulasi prediksi, perbandingan model, dan ringkasan dataset. Seluruh evaluasi menggunakan data sintetis.
 
 ## Menjalankan aplikasi

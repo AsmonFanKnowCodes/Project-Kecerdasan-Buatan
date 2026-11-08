@@ -8,7 +8,7 @@ Eksperimen ini memakai data sintetis untuk pembelajaran. Skor mengikuti pola dal
 
 ## Jalankan web
 
-Butuh Python 3.13. Buka PowerShell di folder repo, lalu jalankan:
+Pakai Python 3.13 atau 3.14. Buka PowerShell di folder repo, lalu jalankan:
 
 ```powershell
 python -m venv .venv

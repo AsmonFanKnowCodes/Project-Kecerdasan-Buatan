@@ -1,0 +1,196 @@
+.st-key-lab_simulation {
+  container: lab-workspace / inline-size;
+  padding-block: clamp(1rem, 3vw, 2.25rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.lab-workspace-title {
+  padding-bottom: .5rem;
+}
+
+.lab-workspace-title h2 {
+  margin: 0 0 .625rem;
+  padding: 0;
+  font: 400 clamp(2.25rem, 4vw, 3.5rem)/1.04 var(--lab-display);
+  letter-spacing: -.045em;
+  color: var(--lab-ink);
+}
+
+.lab-workspace-title p {
+  margin: 0;
+  color: var(--lab-muted);
+}
+
+.st-key-lab_inputs .stForm {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.st-key-lab_presets .stButton button {
+  min-height: 2.75rem;
+  border-color: #baab96;
+  border-radius: .25rem;
+  background: transparent;
+  color: #4a3121;
+  padding-inline: 1rem;
+}
+
+.st-key-lab_presets .stButton button:hover {
+  border-color: #62432d;
+  background: #efe2ce;
+}
+
+.st-key-lab_inputs .stForm [data-testid="stVerticalBlock"] {
+  gap: 0;
+}
+
+.st-key-lab_inputs .stForm :is([data-testid="stNumberInput"], [data-testid="stSelectbox"]) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--lab-rule);
+  padding: .6875rem 0;
+}
+
+.st-key-lab_inputs .stForm [data-testid="stWidgetLabel"] {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.st-key-lab_inputs .stForm [data-testid="stWidgetLabel"] p {
+  font-weight: 550;
+}
+
+.st-key-lab_inputs .st-key-resistance [data-testid="stSelectbox"] {
+  border-bottom: 1px solid var(--lab-rule);
+}
+
+.st-key-lab_inputs :is([data-testid="stNumberInputContainer"], [data-testid="stSelectbox"] [role="group"]) {
+  min-height: 2.75rem;
+  background: #fbf8f1;
+  border-color: #cbbba5;
+  border-radius: .25rem;
+}
+
+.st-key-lab_inputs .stFormSubmitButton {
+  padding-top: 1rem;
+}
+
+.st-key-lab_inputs .stFormSubmitButton button {
+  min-height: 2.75rem;
+  padding-inline: 1.375rem;
+  border-color: #503222;
+  border-radius: .25rem;
+  background: #503222;
+  color: #fff9ee;
+}
+
+.st-key-lab_inputs .stFormSubmitButton button:hover {
+  border-color: #332016;
+  background: #332016;
+}
+
+.st-key-lab_result {
+  padding-inline-start: clamp(1.5rem, 3.5vw, 3rem);
+  border-inline-start: 1px solid var(--lab-rule);
+  color: var(--lab-ink);
+}
+
+.st-key-lab_result :is(h3, p, strong, [data-testid="stMetricValue"]) {
+  color: var(--lab-ink);
+}
+
+.st-key-lab_result h3 {
+  margin: 0;
+  padding: 0;
+  font: 400 clamp(1.875rem, 3vw, 2.75rem)/1.08 var(--lab-display);
+  letter-spacing: -.035em;
+}
+
+.st-key-lab_result [data-testid="stCaptionContainer"] p,
+.st-key-lab_result [data-testid="stMetricLabel"] p {
+  color: var(--lab-muted);
+}
+
+.st-key-lab_result [data-testid="stCaptionContainer"] {
+  opacity: 1;
+}
+
+.st-key-lab_result [data-testid="stMetricValue"],
+.lab-empty-score {
+  font: 400 clamp(3.5rem, 7vw, 6rem)/.98 var(--lab-display);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -.05em;
+}
+
+.lab-empty-score {
+  margin-block: .125rem;
+  color: #786551;
+}
+
+.lab-result-class {
+  margin: 0;
+  font-size: .9375rem;
+}
+
+.lab-class-badge {
+  display: inline-block;
+  padding: .25rem .5rem;
+  border: 1px solid #bd9b75;
+  border-radius: .125rem;
+  background: #e9d6be;
+  color: #533722;
+  font-size: .8125rem;
+  font-weight: 650;
+}
+
+.lab-score-track {
+  position: relative;
+  height: .1875rem;
+  margin-block: .5rem 0;
+  background: #d8cab6;
+}
+
+.lab-score-track::after {
+  position: absolute;
+  inset-block: -.1875rem;
+  left: var(--lab-threshold);
+  width: 2px;
+  background: #513721;
+  content: "";
+}
+
+.lab-score-track span {
+  display: block;
+  width: var(--lab-score);
+  height: 100%;
+  background: #8c6037;
+}
+
+@container lab-workspace (max-width: 41rem) {
+  .st-key-lab_simulation > [data-testid="stLayoutWrapper"] > [data-testid="stHorizontalBlock"] {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .st-key-lab_simulation > [data-testid="stLayoutWrapper"] > [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .st-key-lab_result {
+    padding-block-start: 1.375rem;
+    padding-inline-start: 0;
+    border-block-start: 1px solid var(--lab-rule);
+    border-inline-start: 0;
+  }
+}
+
+@container lab-workspace (max-width: 28rem) {
+  .st-key-lab_inputs .stForm :is([data-testid="stNumberInput"], [data-testid="stSelectbox"]) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .375rem;
+  }
+}

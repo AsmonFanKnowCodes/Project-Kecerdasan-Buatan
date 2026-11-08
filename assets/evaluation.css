@@ -1,0 +1,226 @@
+.lab-eval {
+  container: lab-evaluation / inline-size;
+  color: var(--lab-ink);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.lab-eval-lead {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 1.75rem;
+  padding: clamp(1.25rem, 4cqw, 2.5rem);
+  border-block: 1px solid #c5ad90;
+  background: linear-gradient(110deg, #f1e4d2, #f8f1e5 76%);
+}
+
+.lab-eval h2 {
+  padding: 0;
+  margin: 0;
+  font: 400 clamp(1.625rem, 3.1cqw, 2.25rem)/1.1 var(--lab-display);
+  letter-spacing: -.035em;
+}
+
+.lab-eval-lead h2 {
+  font-size: clamp(2.375rem, 5.25cqw, 4rem);
+  margin-block: .25rem .75rem;
+}
+
+.lab-eval p {
+  margin: 0;
+  color: var(--lab-muted);
+}
+
+.lab-eval .lab-eval-label {
+  color: #62432d;
+  font-size: .875rem;
+  font-weight: 650;
+}
+
+.lab-eval dl.lab-eval-primary,
+.lab-eval .lab-eval-more dl {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+.lab-eval dl.lab-eval-primary {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .875rem;
+  padding-inline-start: clamp(1rem, 3cqw, 2rem);
+  border-inline-start: 1px solid #c5ad90;
+}
+
+.lab-eval-primary > div,
+.lab-eval-more dl > div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: .375rem;
+  min-width: 0;
+}
+
+.lab-eval dl dt {
+  color: var(--lab-muted);
+  font-size: .8125rem;
+  line-height: 1.35;
+}
+
+.lab-eval dl dd {
+  margin: 0;
+  color: #3e2b20;
+  font: 400 clamp(1.625rem, 4.15cqw, 3rem)/1 var(--lab-display);
+  letter-spacing: -.045em;
+}
+
+.lab-eval-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: clamp(1.5rem, 4cqw, 3.5rem);
+  padding-block: clamp(1.5rem, 5cqw, 3.25rem);
+}
+
+.lab-eval-detail section > p {
+  margin-top: .5rem;
+  font-size: .875rem;
+}
+
+.lab-eval table {
+  width: 100%;
+  margin: 1rem 0 0;
+  border-collapse: collapse;
+  color: var(--lab-ink);
+}
+
+.lab-eval table :is(th, td) {
+  padding: .625rem .45rem;
+  border-bottom: 1px solid var(--lab-rule);
+  vertical-align: middle;
+}
+
+.lab-eval table thead th {
+  color: #5d4532;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.lab-eval-ranking :is(th, td) {
+  text-align: left;
+}
+
+.lab-eval-ranking th:first-child {
+  padding-inline-start: 0;
+}
+
+.lab-eval-ranking td:last-child,
+.lab-eval-ranking thead th:last-child {
+  padding-inline-end: 0;
+  text-align: right;
+}
+
+.lab-eval-ranking tbody :is(th, td) {
+  font-size: .875rem;
+}
+
+.lab-eval-ranking tbody th {
+  width: 43%;
+  font-weight: 500;
+}
+
+.lab-eval-ranking td:nth-child(2) {
+  width: 39%;
+}
+
+.lab-eval-ap {
+  display: block;
+  margin-bottom: .3rem;
+}
+
+.lab-eval-bar {
+  display: block;
+  height: .3rem;
+  background: #e6d9c6;
+}
+
+.lab-eval-bar > span {
+  display: block;
+  height: 100%;
+  background: #9b7957;
+}
+
+.lab-eval-selected :is(th, td) {
+  font-weight: 700;
+  color: #4d301d;
+}
+
+.lab-eval-selected .lab-eval-bar > span {
+  background: #69452b;
+}
+
+.lab-eval-matrix {
+  table-layout: fixed;
+  text-align: center;
+}
+
+.lab-eval-matrix th:first-child {
+  width: 29%;
+  padding-inline-start: 0;
+  text-align: left;
+}
+
+.lab-eval-matrix tbody th {
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.lab-eval-matrix tbody td {
+  padding-block: .9rem;
+  border-inline-start: 1px solid #fbf7ef;
+  background: rgba(170, 115, 67, var(--lab-heat));
+  color: #2e2118;
+  font: 400 clamp(1.25rem, 2.6cqw, 1.875rem)/1 var(--lab-display);
+}
+
+.lab-eval-detail .lab-eval-caption {
+  margin-top: .75rem;
+  font-size: .8125rem;
+}
+
+.lab-eval-more {
+  padding-block: clamp(1.25rem, 3cqw, 2rem);
+  border-block: 1px solid var(--lab-rule);
+}
+
+.lab-eval-more h2 {
+  font-size: clamp(1.375rem, 2.5cqw, 1.875rem);
+}
+
+.lab-eval-more dl {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lab-eval-more dl dd {
+  font-size: clamp(1.5rem, 3.1cqw, 2.25rem);
+}
+
+@container lab-evaluation (max-width: 48rem) {
+  .lab-eval-lead,
+  .lab-eval-detail {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lab-eval dl.lab-eval-primary {
+    padding: 1.125rem 0 0;
+    padding-inline-start: 0;
+    border-inline-start: 0;
+    border-block-start: 1px solid #c5ad90;
+  }
+}
+
+@container lab-evaluation (max-width: 24rem) {
+  .lab-eval-more dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

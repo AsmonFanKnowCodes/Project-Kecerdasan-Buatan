@@ -1,0 +1,5 @@
+/.venv/
+/data/
+/artifacts/tmp*/
+__pycache__/
+.streamlit/secrets.toml

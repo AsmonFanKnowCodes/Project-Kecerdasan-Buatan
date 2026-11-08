@@ -1,0 +1,64 @@
+{
+  "dataset": {
+    "rows": 500000,
+    "columns": 33,
+    "positive_rate": 0.048284
+  },
+  "split": {
+    "train": 350000,
+    "validation": 75000,
+    "test": 75000
+  },
+  "seed": 42,
+  "target": "Mortality_5Yr_Outcome",
+  "features": [
+    "Current_CD4_Count",
+    "Current_Viral_Load",
+    "TB_Coinfection",
+    "Drug_Resistance_Mutation"
+  ],
+  "selected_model": "Random Forest",
+  "threshold": 0.1683388888436199,
+  "models": [
+    {
+      "name": "Logistic Regression",
+      "average_precision": 0.2795088574573893,
+      "roc_auc": 0.8722475015347863
+    },
+    {
+      "name": "Decision Tree",
+      "average_precision": 0.2811426208686062,
+      "roc_auc": 0.8880473308288354
+    },
+    {
+      "name": "Random Forest",
+      "average_precision": 0.2955203857816045,
+      "roc_auc": 0.8887709013718875
+    },
+    {
+      "name": "Baseline (Dummy)",
+      "average_precision": 0.048293333333333334,
+      "roc_auc": 0.5
+    }
+  ],
+  "test": {
+    "average_precision": 0.3041885604516929,
+    "roc_auc": 0.8961495872999159,
+    "accuracy": 0.8959733333333333,
+    "precision": 0.27824334358756764,
+    "recall": 0.7243855288594311,
+    "f1": 0.4020539546290619,
+    "balanced_accuracy": 0.8145316876424251,
+    "confusion_matrix": [
+      [
+        64575,
+        6804
+      ],
+      [
+        998,
+        2623
+      ]
+    ]
+  },
+  "model_sha256": "4816f74231f408c633cdd4089e4e9a17c67a1398a49f0c9249fe7f32bc7933e4"
+}
